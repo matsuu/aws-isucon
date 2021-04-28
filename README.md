@@ -2,7 +2,7 @@
 
 ## これはなに
 
-[ISUCON](https://isucon.net)過去問をAWS環境で構築するためのまとめです。
+[ISUCON](https://isucon.net)過去問をAWS環境でするための一式まとめ
 
 ## AMI
 
