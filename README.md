@@ -28,7 +28,7 @@
 
 自分でAMIを作りたい方のためにPacker Templatesを公開しています。
 
-* ISUCON5予選
+* [ISUCON5予選](https://github.com/matsuu/aws-isucon5-qualify)
 * [ISUCON6予選](https://github.com/matsuu/aws-isucon6-qualify)
 * [ISUCON7予選](https://github.com/matsuu/aws-isucon7-qualify)
 * [ISUCON8予選](https://github.com/matsuu/aws-isucon8-qualify)
