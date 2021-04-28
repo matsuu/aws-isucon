@@ -9,14 +9,21 @@
 東京リージョンにAMIを用意しました。
 パブリック設定にしているのでAWS環境があれば構築可能です。
 
-| 対象 | リージョン | AMI ID | AMI 名 | SSH接続用アカウント | 備考 |
-| --- | --- | --- | --- | --- | --- |
-| ISUCON5予選 | ap-northeast-1 | ami-0a122e40004795ffc | isucon5-qualify-20210428095004 | ubuntu | webappsとbenchを含む |
-| ISUCON6予選 | ap-northeast-1 | ami-0ecdf8d0bc5a247e7 | isucon6-qualify-20210427014047 | ubuntu | webappsとbenchを含む |
-| ISUCON7予選 | ap-northeast-1 | ami-0f97faae90209fcac | isucon7-qualify-20210427013933 | ubuntu | webappsとbenchを含む |
-| ISUCON8予選 | ap-northeast-1 | ami-05008b6deb3021da1 | isucon8-qualify-20210427013641 | centos | webappsとbenchを含む |
-| ISUCON9予選 | ap-northeast-1 | ami-0c482a5710c89aed7 | isucon9-qualify-20210427012007 | ubuntu | webappsとbenchを含む |
-| ISUCON10予選 | ap-northeast-1 | ami-02ed76fcc6d153dbb | isucon10-qualify-20210427115313 | ubuntu | webappsとbenchを含む |
+| 対象 | リージョン | AMI ID | AMI 名 | SSH接続アカウント |
+| --- | --- | --- | --- | --- |
+| ISUCON5予選 | ap-northeast-1 | ami-0a122e40004795ffc | isucon5-qualify-20210428095004 | ubuntu |
+| ISUCON6予選 | ap-northeast-1 | ami-0ecdf8d0bc5a247e7 | isucon6-qualify-20210427014047 | ubuntu |
+| ISUCON7予選 | ap-northeast-1 | ami-0f97faae90209fcac | isucon7-qualify-20210427013933 | ubuntu |
+| ISUCON8予選 | ap-northeast-1 | ami-05008b6deb3021da1 | isucon8-qualify-20210427013641 | centos |
+| ISUCON9予選 | ap-northeast-1 | ami-0c482a5710c89aed7 | isucon9-qualify-20210427012007 | ubuntu |
+| ISUCON10予選 | ap-northeast-1 | ami-02ed76fcc6d153dbb | isucon10-qualify-20210427115313 | ubuntu |
+
+webappとbenchの両方を含んだイメージになっています。
+ログイン後、isuconユーザに切り替えてください。
+
+```sh
+sudo su - isucon
+```
 
 ### 免責事項
 
