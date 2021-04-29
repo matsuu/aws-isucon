@@ -11,12 +11,12 @@
 
 | 対象 | リージョン | AMI ID | AMI 名 | SSH接続アカウント |
 | --- | --- | --- | --- | --- |
-| ISUCON5予選 | ap-northeast-1 | ami-0a122e40004795ffc | isucon5-qualify-20210428095004 | ubuntu |
-| ISUCON6予選 | ap-northeast-1 | ami-0ecdf8d0bc5a247e7 | isucon6-qualify-20210427014047 | ubuntu |
-| ISUCON7予選 | ap-northeast-1 | ami-0f97faae90209fcac | isucon7-qualify-20210427013933 | ubuntu |
-| ISUCON8予選 | ap-northeast-1 | ami-05008b6deb3021da1 | isucon8-qualify-20210427013641 | centos |
-| ISUCON9予選 | ap-northeast-1 | ami-0c482a5710c89aed7 | isucon9-qualify-20210427012007 | ubuntu |
-| ISUCON10予選 | ap-northeast-1 | ami-02ed76fcc6d153dbb | isucon10-qualify-20210427115313 | ubuntu |
+| ISUCON5予選  | ap-northeast-1 | ami-02bf29df37238d015 | isucon5-qualify-20210429012748  | ubuntu |
+| ISUCON6予選  | ap-northeast-1 | ami-01bc98cbbd26722b0 | isucon6-qualify-20210429012522  | ubuntu |
+| ISUCON7予選  | ap-northeast-1 | ami-0cc65d9c4d98c4ad9 | isucon7-qualify-20210429012434  | ubuntu |
+| ISUCON8予選  | ap-northeast-1 | ami-097b2f6dc28b08370 | isucon8-qualify-20210429012121  | centos |
+| ISUCON9予選  | ap-northeast-1 | ami-03b1b78bb1da5122f | isucon9-qualify-20210429011718  | ubuntu |
+| ISUCON10予選 | ap-northeast-1 | ami-03bbe60df80bdccc0 | isucon10-qualify-20210429011055 | ubuntu |
 
 webappとbenchの両方を含んだイメージになっています。
 ログイン後、isuconユーザに切り替えてください。
@@ -35,12 +35,12 @@ sudo su - isucon
 
 自分でAMIを作りたい方のためにPacker Templatesを公開しています。
 
-* [ISUCON5予選](https://github.com/matsuu/aws-isucon5-qualify)
-* [ISUCON6予選](https://github.com/matsuu/aws-isucon6-qualify)
-* [ISUCON7予選](https://github.com/matsuu/aws-isucon7-qualify)
-* [ISUCON8予選](https://github.com/matsuu/aws-isucon8-qualify)
-* [ISUCON9予選](https://github.com/matsuu/aws-isucon9-qualify)
-* [ISUCON10予選](https://github.com/matsuu/aws-isucon10-qualify)
+* [ISUCON5予選](https://github.com/matsuu/aws-isucon/tree/main/isucon5-qualify)
+* [ISUCON6予選](https://github.com/matsuu/aws-isucon/tree/main/isucon6-qualify)
+* [ISUCON7予選](https://github.com/matsuu/aws-isucon/tree/main/isucon7-qualify)
+* [ISUCON8予選](https://github.com/matsuu/aws-isucon/tree/main/isucon8-qualify)
+* [ISUCON9予選](https://github.com/matsuu/aws-isucon/tree/main/isucon9-qualify)
+* [ISUCON10予選](https://github.com/matsuu/aws-isucon/tree/main/isucon10-qualify)
 
 サーバ内の構築にはAnsibleを使っています。Ansibleのplaybookのみ必要な場合は[matsuu/ansible-isucon](https://github.com/matsuu/ansible-isucon)をどうぞ。
 
