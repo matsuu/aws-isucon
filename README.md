@@ -1,4 +1,4 @@
-# matsuu/aws-isucon
+# aws-isucon
 
 ## これはなに
 
@@ -50,3 +50,7 @@ sudo su - isucon
 * [matsuu/ansible-isucon](https://github.com/matsuu/ansible-isucon)
 * [matsuu/docker-isucon](https://github.com/matsuu/docker-isucon)
 * [matsuu/vagrant-isucon](https://github.com/matsuu/vagrant-isucon)
+
+## TODO
+
+* [EC2 Image Builder](https://aws.amazon.com/jp/image-builder/)への変更
