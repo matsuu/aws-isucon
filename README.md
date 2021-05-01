@@ -42,11 +42,17 @@ sudo -i -u isucon
 自分でAMIを作りたい方のためにPacker Templatesを公開しています。
 
 * [ISUCON5予選](https://github.com/matsuu/aws-isucon/tree/main/isucon5-qualify)
+* ISUCON5本選
 * [ISUCON6予選](https://github.com/matsuu/aws-isucon/tree/main/isucon6-qualify)
+* ISUCON6本選
 * [ISUCON7予選](https://github.com/matsuu/aws-isucon/tree/main/isucon7-qualify)
+* ISUCON7本選
 * [ISUCON8予選](https://github.com/matsuu/aws-isucon/tree/main/isucon8-qualify)
+* ISUCON8本選
 * [ISUCON9予選](https://github.com/matsuu/aws-isucon/tree/main/isucon9-qualify)
+* ISUCON9本選
 * [ISUCON10予選](https://github.com/matsuu/aws-isucon/tree/main/isucon10-qualify)
+* [ISUCON10本選](https://github.com/matsuu/aws-isucon/tree/main/isucon10-final)
 
 サーバ内の構築にはAnsibleを使っています。Ansibleのplaybookのみ必要な場合は[matsuu/ansible-isucon](https://github.com/matsuu/ansible-isucon)をどうぞ。
 
