@@ -22,7 +22,7 @@ webappとbenchの両方を含んだイメージになっています。
 ログイン後、isuconユーザに切り替えてください。
 
 ```sh
-sudo su - isucon
+sudo -i -u isucon
 ```
 
 ### 免責事項
