@@ -20,7 +20,7 @@
 | ISUCON8予選  | ap-northeast-1 | ami-097b2f6dc28b08370 | isucon8-qualify-20210429012121  | centos |
 | ISUCON8本選  | ap-northeast-1 | TBA | | |
 | ISUCON9予選  | ap-northeast-1 | ami-03b1b78bb1da5122f | isucon9-qualify-20210429011718  | ubuntu |
-| ISUCON9本選  | ap-northeast-1 | TBA | | |
+| ISUCON9本選  | ap-northeast-1 | ami-07bf5a677677b826d | isucon9-final-20210520015031 | ubuntu |
 | ISUCON10予選 | ap-northeast-1 | ami-03bbe60df80bdccc0 | isucon10-qualify-20210429011055 | ubuntu |
 | ISUCON10本選 | ap-northeast-1 | ami-0f7362c1bbc7e30ec | isucon10-final-20210501035332 | ubuntu |
 
@@ -50,7 +50,7 @@ sudo -i -u isucon
 * [ISUCON8予選](https://github.com/matsuu/aws-isucon/tree/main/isucon8-qualify)
 * ISUCON8本選
 * [ISUCON9予選](https://github.com/matsuu/aws-isucon/tree/main/isucon9-qualify)
-* ISUCON9本選
+* [ISUCON9本選](https://github.com/matsuu/aws-isucon/tree/main/isucon9-final)
 * [ISUCON10予選](https://github.com/matsuu/aws-isucon/tree/main/isucon10-qualify)
 * [ISUCON10本選](https://github.com/matsuu/aws-isucon/tree/main/isucon10-final)
 
