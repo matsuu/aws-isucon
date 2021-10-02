@@ -23,6 +23,8 @@
 | ISUCON9本選  | ap-northeast-1 | ami-07bf5a677677b826d | isucon9-final-20210520015031 | ubuntu |
 | ISUCON10予選 | ap-northeast-1 | ami-03bbe60df80bdccc0 | isucon10-qualify-20210429011055 | ubuntu |
 | ISUCON10本選 | ap-northeast-1 | ami-0f7362c1bbc7e30ec | isucon10-final-20210501035332 | ubuntu |
+| ISUCON11予選 | ap-northeast-1 | ami-01730fadc0a1d1e1c | isucon11-qualify-20211002045810 | ubuntu |
+| ISUCON11本選 | ap-northeast-1 | ami-05b3568819bcaf5c9 | isucon11-final-20211002125817 | ubuntu |
 
 webappとbenchの両方を含んだイメージになっています。
 ログイン後、isuconユーザに切り替えてください。
@@ -53,8 +55,10 @@ sudo -i -u isucon
 * [ISUCON9本選](https://github.com/matsuu/aws-isucon/tree/main/isucon9-final)
 * [ISUCON10予選](https://github.com/matsuu/aws-isucon/tree/main/isucon10-qualify)
 * [ISUCON10本選](https://github.com/matsuu/aws-isucon/tree/main/isucon10-final)
+* [ISUCON11予選](https://github.com/matsuu/aws-isucon/tree/main/isucon11-qualify)
+* [ISUCON11本選](https://github.com/matsuu/aws-isucon/tree/main/isucon11-final)
 
-サーバ内の構築にはAnsibleを使っています。Ansibleのplaybookのみ必要な場合は[matsuu/ansible-isucon](https://github.com/matsuu/ansible-isucon)をどうぞ。
+サーバ内の構築にはAnsible/Itamaeを使っています。Ansibleのplaybookのみ必要な場合は[matsuu/ansible-isucon](https://github.com/matsuu/ansible-isucon)をどうぞ。
 
 ## 関連リンク
 
