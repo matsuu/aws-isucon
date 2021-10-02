@@ -22,14 +22,6 @@ source "amazon-ebs" "ubuntu-amd64" {
     owners      = ["099720109477"]
   }
 
-  subnet_filter {
-    filters = {
-      "tag:Class" : "packer"
-    }
-    most_free = true
-    random    = false
-  }
-
   launch_block_device_mappings {
     volume_type           = "gp2"
     device_name           = "/dev/sda1"

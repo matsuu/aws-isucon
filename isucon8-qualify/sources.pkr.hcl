@@ -13,14 +13,6 @@ source "amazon-ebs" "ubuntu-amd64" {
     Name = var.ami_name
   }
 
-  subnet_filter {
-    filters = {
-      "tag:Class" : "packer"
-    }
-    most_free = true
-    random    = false
-  }
-
   launch_block_device_mappings {
     volume_type           = "gp2"
     device_name           = "/dev/sda1"
