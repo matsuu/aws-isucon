@@ -9,6 +9,9 @@ source "amazon-ebs" "ubuntu-amd64" {
   spot_price          = "auto"
 
   source_ami = var.source_ami
+  fleet_tags = {
+    Name = var.ami_name
+  }
 
   subnet_filter {
     filters = {

@@ -8,6 +8,10 @@ source "amazon-ebs" "ubuntu-amd64" {
   spot_instance_types = var.spot_instance_types
   spot_price          = "auto"
 
+  fleet_tags = {
+    Name = var.ami_name
+  }
+
   source_ami_filter {
     filters = {
       name                = "ubuntu/images/*ubuntu-focal-20.04-amd64-server-*"
