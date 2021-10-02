@@ -31,8 +31,6 @@ source "amazon-ebs" "ubuntu-amd64" {
 
   ebs_optimized = true
 
-  pause_before_connecting = "30s"
-
   ssh_username              = "ubuntu"
   ssh_interface             = "public_ip"
   ssh_clear_authorized_keys = true
