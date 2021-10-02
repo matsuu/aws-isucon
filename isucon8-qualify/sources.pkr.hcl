@@ -1,4 +1,4 @@
-source "amazon-ebs" "ubuntu-amd64" {
+source "amazon-ebs" "centos7-amd64" {
   ami_name        = var.ami_name
   ami_description = var.ami_description
   ami_groups      = var.ami_groups
@@ -8,9 +8,20 @@ source "amazon-ebs" "ubuntu-amd64" {
   spot_instance_types = var.spot_instance_types
   spot_price          = "auto"
 
-  source_ami = var.source_ami
   fleet_tags = {
     Name = var.ami_name
+  }
+
+  # https://wiki.centos.org/Cloud/AWS
+  source_ami_filter {
+    filters = {
+      product-code        = "cvugziknvmxgqna9noibqnnsy"
+      "product-code.type" = "marketplace"
+      root-device-type    = "ebs"
+      virtualization-type = "hvm"
+    }
+    most_recent = true
+    owners      = ["679593333241"]
   }
 
   launch_block_device_mappings {

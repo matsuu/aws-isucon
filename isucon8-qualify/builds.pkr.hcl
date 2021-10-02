@@ -1,5 +1,5 @@
 build {
-  sources = ["source.amazon-ebs.ubuntu-amd64"]
+  sources = ["source.amazon-ebs.centos7-amd64"]
 
   provisioner "shell" {
     inline = ["/usr/bin/cloud-init status --wait"]
