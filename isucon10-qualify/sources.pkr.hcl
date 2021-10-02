@@ -8,6 +8,10 @@ source "amazon-ebs" "ubuntu-amd64" {
   spot_instance_types = var.spot_instance_types
   spot_price          = "auto"
 
+  fleet_tags = {
+    Name = var.ami_name
+  }
+
   source_ami_filter {
     filters = {
       name                = "ubuntu/images/*ubuntu-bionic-18.04-amd64-server-*"
@@ -18,14 +22,6 @@ source "amazon-ebs" "ubuntu-amd64" {
     owners      = ["099720109477"]
   }
 
-  subnet_filter {
-    filters = {
-      "tag:Class" : "packer"
-    }
-    most_free = true
-    random    = false
-  }
-
   launch_block_device_mappings {
     volume_type           = "gp2"
     device_name           = "/dev/sda1"
@@ -34,8 +30,6 @@ source "amazon-ebs" "ubuntu-amd64" {
   }
 
   ebs_optimized = true
-
-  pause_before_connecting = "30s"
 
   ssh_username              = "ubuntu"
   ssh_interface             = "public_ip"
