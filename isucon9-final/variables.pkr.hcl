@@ -1,6 +1,6 @@
 variable "ami_name" {
   type    = string
-  default = "isucon9-final-{{isotime \"20060102030405\"}}"
+  default = "isucon9-final-{{isotime \"20060102150405\"}}"
 }
 
 variable "ami_description" {
