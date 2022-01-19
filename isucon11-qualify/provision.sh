@@ -12,7 +12,6 @@ git clone --depth=1 https://github.com/isucon/isucon11-qualify.git ${GITDIR}
 (
   cd ${GITDIR}/provisioning/ansible
   # common
-  sed -i -e '/timezone/d' roles/common/tasks/main.yml
   sed -i -e '/name.*Deploy/,/dest/d' -e 's/^$/    recurse: yes/' roles/common/tasks/isucon11-qualify.yml
 
   # bench

@@ -23,7 +23,7 @@
 | ISUCON9本選  | ap-northeast-1 | ami-07bf5a677677b826d | isucon9-final-20210520015031 | ubuntu |
 | ISUCON10予選 | ap-northeast-1 | ami-03bbe60df80bdccc0 | isucon10-qualify-20210429011055 | ubuntu |
 | ISUCON10本選 | ap-northeast-1 | ami-0f7362c1bbc7e30ec | isucon10-final-20210501035332 | ubuntu |
-| ISUCON11予選 | ap-northeast-1 | ami-01730fadc0a1d1e1c | isucon11-qualify-20211002045810 | ubuntu |
+| ISUCON11予選 | ap-northeast-1 | ami-0cadedb64be33cecf | isucon11-qualify-20220119082906 | ubuntu |
 | ISUCON11本選 | ap-northeast-1 | ami-05b3568819bcaf5c9 | isucon11-final-20211002125817 | ubuntu |
 
 webappとbenchの両方を含んだイメージになっています。
