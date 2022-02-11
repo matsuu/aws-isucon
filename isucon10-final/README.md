@@ -1,10 +1,11 @@
-# isucon9-final
+# isucon10-final
 
 ## Overview
 
-ISUCON9本選をAWS環境で構築するためのPacker Templateです。
+ISUCON10本選をAWS環境で構築するためのPacker Templateです。
 
-サーバ内の構築にはシェルスクリプトを使っています。
+
+サーバ内の構築にはAnsibleを使っています。Ansibleのplaybookのみ必要な場合は[isucon/isucon10-final](https://github.com/isucon/isucon10-final)をどうぞ。
 
 ## Build
 
@@ -29,16 +30,20 @@ ubuntuユーザでsshログインが可能です。
 
 ```sh
 sudo -i -u isucon
-cd isutrain/bench
-make
+sudo systemctl start envoy
+sudo systemctl start xsuportal-api-$LANGUAGE.service
+sudo systemctl start xsuportal-web-$LANGUAGE.service
+cd benchmarker
+bin/benchmarker
 ```
 
 ## Manual
 
-* https://github.com/isucon/isucon9-final/blob/master/docs/MANUAL.md
+* https://github.com/isucon/isucon10-final/blob/master/docs/manual.md
+* https://github.com/isucon/isucon10-final/blob/master/docs/xsucon.md
 
 ## Related
 
 * [ISUCON](https://isucon.net/)
-* [isucon/isucon9-final](https://github.com/isucon/isucon9-final)
+* [isucon/isucon10-final](https://github.com/isucon/isucon10-final)
 * [matsuu/aws-isucon](https://github.com/matsuu/aws-isucon)

@@ -2,29 +2,27 @@
 
 ## これはなに
 
-[ISUCON](https://isucon.net)過去問をAWS環境でするための一式まとめ
+[ISUCON](https://isucon.net)過去問環境をAWSで再現するための一式まとめ
 
 ## AMI
 
 東京リージョンにAMIを用意しました。
-パブリック設定にしているのでAWS環境があれば構築可能です。
+パブリック設定にしているのでAWS環境があればこのAMIから構築可能です。
 
-| 対象 | リージョン | AMI ID | AMI 名 | SSH接続アカウント |
-| --- | --- | --- | --- | --- |
-| ISUCON5予選  | ap-northeast-1 | ami-02bf29df37238d015 | isucon5-qualify-20210429012748  | ubuntu |
-| ISUCON5本選  | ap-northeast-1 | TBA | | |
-| ISUCON6予選  | ap-northeast-1 | ami-01bc98cbbd26722b0 | isucon6-qualify-20210429012522  | ubuntu |
-| ISUCON6本選  | ap-northeast-1 | TBA | | |
-| ISUCON7予選  | ap-northeast-1 | ami-0cc65d9c4d98c4ad9 | isucon7-qualify-20210429012434  | ubuntu |
-| ISUCON7本選  | ap-northeast-1 | TBA | | |
-| ISUCON8予選  | ap-northeast-1 | ami-097b2f6dc28b08370 | isucon8-qualify-20210429012121  | centos |
-| ISUCON8本選  | ap-northeast-1 | TBA | | |
-| ISUCON9予選  | ap-northeast-1 | ami-03b1b78bb1da5122f | isucon9-qualify-20210429011718  | ubuntu |
-| ISUCON9本選  | ap-northeast-1 | ami-07bf5a677677b826d | isucon9-final-20210520015031 | ubuntu |
-| ISUCON10予選 | ap-northeast-1 | ami-03bbe60df80bdccc0 | isucon10-qualify-20210429011055 | ubuntu |
-| ISUCON10本選 | ap-northeast-1 | ami-0f7362c1bbc7e30ec | isucon10-final-20210501035332 | ubuntu |
-| ISUCON11予選 | ap-northeast-1 | ami-0cadedb64be33cecf | isucon11-qualify-20220119082906 | ubuntu |
-| ISUCON11本選 | ap-northeast-1 | ami-05b3568819bcaf5c9 | isucon11-final-20211002125817 | ubuntu |
+| 対象 | リージョン | AMI | SSHアカウント |
+| --- | --- | --- | --- |
+| ISUCON5予選  | ap-northeast-1 | イメージID ami-02bf29df37238d015<br>所有者 839726181030<br>名前 isucon5-qualify-20210429012748  | ubuntu |
+| ISUCON6予選  | ap-northeast-1 | イメージID ami-01bc98cbbd26722b0<br>所有者 839726181030<br>名前 isucon6-qualify-20210429012522  | ubuntu |
+| ISUCON7予選  | ap-northeast-1 | イメージID ami-0cc65d9c4d98c4ad9<br>所有者 839726181030<br>名前 isucon7-qualify-20210429012434  | ubuntu |
+| ISUCON8予選  | ap-northeast-1 | イメージID ami-097b2f6dc28b08370<br>所有者 839726181030<br>名前 isucon8-qualify-20210429012121  | centos |
+| ISUCON9予選  | ap-northeast-1 | イメージID ami-03b1b78bb1da5122f<br>所有者 839726181030<br>名前 isucon9-qualify-20210429011718  | ubuntu |
+| ISUCON9本選  | ap-northeast-1 | イメージID ami-07bf5a677677b826d<br>所有者 839726181030<br>名前 isucon9-final-20210520015031    | ubuntu |
+| ISUCON10予選 | ap-northeast-1 | イメージID ami-03bbe60df80bdccc0<br>所有者 839726181030<br>名前 isucon10-qualify-20210429011055 | ubuntu |
+| ISUCON10本選 | ap-northeast-1 | イメージID ami-0f7362c1bbc7e30ec<br>所有者 839726181030<br>名前 isucon10-final-20210501035332   | ubuntu |
+| ISUCON11予選 | ap-northeast-1 | イメージID ami-0cadedb64be33cecf<br>所有者 839726181030<br>名前 isucon11-qualify-20220119082906 | ubuntu |
+| ISUCON11本選 | ap-northeast-1 | イメージID ami-05b3568819bcaf5c9<br>所有者 839726181030<br>名前 isucon11-final-20211002125817   | ubuntu |
+
+AMIからEC2インスタンスを起動する方法は[AWS公式ドキュメント](https://aws.amazon.com/jp/premiumsupport/knowledge-center/launch-instance-custom-ami/)を参照してください。
 
 webappとbenchの両方を含んだイメージになっています。
 ログイン後、isuconユーザに切り替えてください。
@@ -32,6 +30,8 @@ webappとbenchの両方を含んだイメージになっています。
 ```sh
 sudo -i -u isucon
 ```
+
+benchの実行方法はイメージ毎に異なります。下記Packer Templatesのリンク先でご確認ください。
 
 ### 免責事項
 
