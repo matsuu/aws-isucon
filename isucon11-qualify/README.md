@@ -32,9 +32,9 @@ ubuntuユーザでsshログインが可能です。
 sudo -i -u isucon
 cd bench
 # 本番同様にnginx(https)へアクセスを向けたい場合
-./bench -all-addresses 127.0.0.11 -target 127.0.0.11:443 -tls -jia-service-url http://127.0.0.1:4999
+./bench -all-addresses 127.0.0.1 -target 127.0.0.1:443 -tls -jia-service-url http://127.0.0.1:4999
 # isucondition(3000)へ直接アクセスを向けたい場合
-./bench -all-addresses 127.0.0.11 -target 127.0.0.11:3000 -jia-service-url http://127.0.0.1:4999
+./bench -all-addresses 127.0.0.1 -target 127.0.0.1:3000 -jia-service-url http://127.0.0.1:4999
 ```
 
 ## Manual
