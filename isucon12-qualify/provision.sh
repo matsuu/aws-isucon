@@ -12,6 +12,7 @@ sudo rm -rf ${GITDIR}
 git clone --depth=1 https://github.com/isucon/isucon12-qualify.git ${GITDIR}
 (
   cd ${GITDIR}/bench
+  find . -type f -exec sed -i -e "s/t\.isucon\.dev/t.isucon.local/g" {} +
   make
 )
 (
@@ -27,9 +28,15 @@ git clone --depth=1 https://github.com/isucon/isucon12-qualify.git ${GITDIR}
   if [ "${MYARCH}" != "x86_64" ] ; then
     sed -i -e "s/mysql-client/default-mysql-client/" ${GITDIR}/webapp/*/Dockerfile
   fi
-  #openssl req -subj '/CN=*.t.isucon.dev' -nodes -newkey rsa:2048 -keyout cookbooks/nginx/tls/key.pem -out cookbooks/nginx/tls/csr.pem
-  #echo "basicConstraints=critical,CA:true,pathlen:0\nsubjectAltName=DNS.1:*.t.isucon.dev" > cookbooks/nginx/tls/extfile.txt
-  #openssl x509 -in cookbooks/nginx/tls/csr.pem -req -signkey cookbooks/nginx/tls/key.pem -sha256 -days 3650 -out cookbooks/nginx/tls/fullchain.pem -extfile cookbooks/nginx/tls/extfile.txt
+  # devドメインはHSTSが強制有効でブラウザでの動作確認が難しいためドメインを書き換える
+  sed -i -e "s/t\.isucon\.dev/t.isucon.local/g" ${GITDIR}/docker-compose.yml ${GITDIR}/frontend/src/views/admin/AdminView.vue
+  sed -i -e "s/powawa\.net/t.isucon.local/g" ${GITDIR}/frontend/vue.config.js
+  find ${GITDIR}/provisioning -type f -exec sed -i -e "s/\([^ ]*\)\.t\.isucon\.dev/& \1.t.isucon.local/g" {} +
+  find ${GITDIR}/public -type f -exec sed -i -e "s/t\.isucon\.dev/t.isucon.local/g" {} +
+  find ${GITDIR}/webapp -type f -exec sed -i -e "s/t\.isucon\.dev/t.isucon.local/g" {} +
+  openssl req -subj '/CN=*.t.isucon.local' -nodes -newkey rsa:2048 -keyout cookbooks/nginx/tls/key.pem -out cookbooks/nginx/tls/csr.pem
+  echo "subjectAltName=DNS.1:*.t.isucon.local, DNS.2:*.t.isucon.dev" > cookbooks/nginx/tls/extfile.txt
+  openssl x509 -in cookbooks/nginx/tls/csr.pem -req -signkey cookbooks/nginx/tls/key.pem -sha256 -days 3650 -out cookbooks/nginx/tls/fullchain.pem -extfile cookbooks/nginx/tls/extfile.txt
 
   sudo ./mitamae-${MYARCH}-linux local roles/default.rb
 

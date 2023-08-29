@@ -38,6 +38,7 @@ cd bench
 
 ## 本来の設定と異なるところ
 
+* 本番ではドメインとして `*.t.isucon.dev` が使われていましたが、[devトップレベルドメインはHSTS preload-listに含まれており](https://ja.wikipedia.org/wiki/.dev)、正規のSSL証明書がないとアクセスできないため `*.t.isucon.local` に書き換えています
 * SSL証明書は自己署名のものを用意しています
 * コンテスト実施時のインスタンスタイプはc5.large(2vCPU, 4GBメモリー)が3台構成です
 * x86\_64でない環境はMySQL公式パッケージがないためDocker内のmysqlはmariadbになっています
@@ -53,12 +54,12 @@ cd bench
 手元のPCのhostsファイルに以下を追記してください。
 
 ```
-${サーバのIPアドレス} admin.t.isucon.dev
-${サーバのIPアドレス} isucon.t.isucon.dev
-${サーバのIPアドレス} kayac.t.isucon.dev
+${サーバのIPアドレス} admin.t.isucon.local
+${サーバのIPアドレス} isucon.t.isucon.local
+${サーバのIPアドレス} kayac.t.isucon.local
 ```
 
-追記したらブラウザから `https://admin.t.isucon.dev/` や `https://isucon.t.isucon.dev/` にアクセスしてみてください。
+追記したらブラウザから `https://admin.t.isucon.local/` や `https://isucon.t.isucon.local/` にアクセスしてみてください。
 アクセスすると証明書エラーが発生する可能性があります。証明書は `/etc/nginx/tls/fullchain.pem` にあるので手元の証明書ストアに登録することで回避できるはずです。
 
 ## Related
