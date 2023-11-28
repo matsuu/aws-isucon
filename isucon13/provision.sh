@@ -31,6 +31,8 @@ mv ${GITDIR}/webapp/pdns/u.isucon.dev.zone ${GITDIR}/webapp/pdns/u.isucon.local.
 # 自己署名証明書を利用するため
 sed -i -e '/InsecureSkipVerify/s/false/true/' ${GITDIR}/bench/cmd/bench/benchmarker.go ${GITDIR}/bench/cmd/bench/bench.go
 
+# standaloneのためグローバルIPを取得しない
+sed -i -e "/enabled/s/true/false/" ${GITDIR}/provisioning/ansible/roles/globalip/tasks/main.yml
 sed -i -e "s/{{ ansible_default_ipv4.address }}/127.0.0.1/" ${GITDIR}/provisioning/ansible/roles/isucon-user/templates/env.sh
 
 sed -i -e "s/_linux_amd64//" ${GITDIR}/provisioning/ansible/roles/bench/tasks/main.yaml
