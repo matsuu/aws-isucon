@@ -24,6 +24,7 @@
 | [ISUCON12予選](https://github.com/matsuu/aws-isucon/tree/main/isucon12-qualify) | ap-northeast-1 | [ami-073140ad092048333](https://console.aws.amazon.com/ec2/home?region=ap-northeast-1#ImageDetails:imageId=ami-073140ad092048333) | ubuntu |
 | [ISUCON12本選](https://github.com/matsuu/aws-isucon/tree/main/isucon12-final)   | ap-northeast-1 | [ami-0ecfc02bf3af2d03e](https://console.aws.amazon.com/ec2/home?region=ap-northeast-1#ImageDetails:imageId=ami-0ecfc02bf3af2d03e) | ubuntu |
 | [ISUCON13](https://github.com/matsuu/aws-isucon/tree/main/isucon13)   | ap-northeast-1 | [ami-006d211cb716fe8a0](https://console.aws.amazon.com/ec2/home?region=ap-northeast-1#ImageDetails:imageId=ami-006d211cb716fe8a0) | ubuntu |
+| [ISUCON14](https://github.com/matsuu/aws-isucon/tree/main/isucon14) | ap-northeast-1 | [ami-085dbd5fe7bd61f07](https://console.aws.amazon.com/ec2/home?region=ap-northeast-1#ImageDetails:imageId=ami-085dbd5fe7bd61f07) | ubuntu |
 
 webappとbenchの両方を含んだイメージになっています。
 ログイン後、isuconユーザに切り替えてください。
