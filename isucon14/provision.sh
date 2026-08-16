@@ -9,7 +9,9 @@ sudo apt-get update
 sudo apt-get install -y --no-install-recommends ansible apt-utils curl make sudo
 sudo snap install go --classic
 sudo snap install node --classic
-sudo npm install -g pnpm
+# pnpm 10 は依存のビルドスクリプトを既定で実行せず ERR_PNPM_IGNORED_BUILDS で
+# frontend の `pnpm install` が失敗するため、AMI作成時点と同じ 9 系に固定する
+sudo npm install -g pnpm@9
 
 sudo rm -rf ${GITDIR}
 git clone --depth=1 https://github.com/isucon/isucon14.git ${GITDIR}
